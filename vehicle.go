@@ -1,48 +1,44 @@
 package main
 
-import (
-
-)
-
-type vechile interface{
-
+type vechile interface {
 }
 
-type Car struct {
-	model string
-	make string 
-	typeVechile string 
+type car struct {
+	model       string
+	make        string
+	typeVechile string
 }
-type truck struct{
-	model string
-	make string 
-	typeVechile string 
+type truck struct {
+	model       string
+	make        string
+	typeVechile string
 }
-type bike struct{
+type bike struct {
 	model string
-	make string 
+	make  string
 }
 
 // Values array for the feedback.json file
 type values struct {
 	Models []Model `json:"values"`
 }
+
 // Model array for the feedback.json file
 type Model struct {
-	Name string `json:"model"`
+	Name     string   `json:"model"`
 	Feedback []string `json:"feedback"`
 }
 
 type feedbackResult struct {
-	feedbackTotal int,
-	feedbackPositive int,
-	feedbackNegative int,
-	feedbackNeutral int
+	feedbackTotal    int
+	feedbackPositive int
+	feedbackNegative int
+	feedbackNeutral  int
 }
 type rating float32
 
-var vehicleResult  map[string]feedbackResult
-var inventory  []vehicle
+var vehicleResult map[string]feedbackResult
+var inventory []vechile
 
 const (
 	extraPositive rating = 1.2
@@ -54,8 +50,7 @@ const (
 
 func init() {
 
-
-	inventory = []vehicle{
+	inventory = []vechile{
 		bike{"FTR 1200", "Indian"},
 		bike{"Iron 1200", "Harley"},
 		car{"Sonata", "Hyundai", "Sedan"},
@@ -75,7 +70,7 @@ func init() {
 func main() {
 
 	// Generate ratings for the different vehicles
-	
+
 	// Print ratings for the different vehicles
 }
 
