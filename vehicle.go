@@ -1,6 +1,6 @@
 package main
 
-type vechile interface {
+type vehicle interface {
 }
 
 type car struct {
