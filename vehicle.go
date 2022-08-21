@@ -6,12 +6,12 @@ type vehicle interface {
 type car struct {
 	model       string
 	make        string
-	typeVechile string
+	typeVehicle string
 }
 type truck struct {
 	model       string
 	make        string
-	typeVechile string
+	typeVehicle string
 }
 type bike struct {
 	model string
@@ -19,7 +19,7 @@ type bike struct {
 }
 
 // Values array for the feedback.json file
-type values struct {
+type Values struct {
 	Models []Model `json:"values"`
 }
 
